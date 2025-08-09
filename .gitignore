@@ -1,0 +1,12 @@
+*
+
+!*.h
+!*.c
+!*.sh
+!Makefile
+!.gitignore
+!.gitattributes
+
+!*/
+
+.idea/
