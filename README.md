@@ -2,7 +2,7 @@
 
 ## Background: Linux Scheduling
 
-In the lecture, you learned the fundamentals of processes, which are programs executed on your machines. In real-world systems, numerous processes compete for server/computer resources, particularly execution/CPU time. The task at hand is to enhance the scheduler's ability to allocate computation time to each process.
+This was a Task from TUM I solved in 2025, its goal is to understand how to find bugs using Sanitizers and enhance our C coding capabilities. The task at hand is to enhance the scheduler's ability to allocate computation time to each process.
 
 In Linux, when a process is spawned (the mechanism of which we don't care for this task), it initially enters the state of ready. Subsequently, it waits to receive its allocated time, then transitions to the running state where it performs computations. The process's allocated time can be revoked by the scheduler at any time. Afterward, it may receive time again or be terminated altogether.
 
@@ -11,7 +11,7 @@ We now want to look at a simple priority scheduling algorithm, that is inspired 
 2. As long as there is still processes waiting take the process with the minimum runtime
 3. Execute this process and continue at 2. afterwards
 
-## Your task
+## task
 
 Your task now is to find bugs in the following scheduling algorithm using dynamic analysis, similar to how you did this in the homework
 
@@ -20,10 +20,9 @@ You can find example calls below in the run section to test your implementation.
 ### Hints
 
 1. Use AddressSanitzers to find an fix the bugs.
-2. Start with fixing **both bugs in minheap.c first** and after that, the rest which are in scheduler.c. 
-3. In total there are 7 bugs that we want you to identify and fix. 
-4. Do not add “additional” bugs that can not be found by Asan. This might lead to tests failing.
-5. Do not remove or change any print statements.
+2. In total there are 7 bugs that we want you to identify and fix. 
+3. Do not add “additional” bugs that can not be found by Asan. This might lead to tests failing.
+4. Do not remove or change any print statements.
 
 ## Compile
 
